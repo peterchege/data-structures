@@ -8,7 +8,21 @@
              magazineObject[word] = 0;
          magazineObject[word]++
      });
-     console.log(magazineObject)
+
+     var noteIsPossile = true;
+     noteArr.forEach(word => {
+         if (magazineObject[word]) {
+             magazineObject[word]--;
+             if (magazineObject[word] < 0) {
+                 noteIsPossile = false;
+             }
+         } else {
+             noteIsPossile = false;
+         }
+
+     });
+
+     return noteIsPossile;
  }
 
  harnlessRansomNote('', 'this is all the magazine text in the magazine')
