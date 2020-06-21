@@ -14,8 +14,8 @@ function caesarCipher(str, num) {
 
         var currentIndex = alphabet.indexOf(currentLetter);
         var newIndex = currentIndex + num;
-        if (newIndex > 25) newIndex = newIndex - 26
-        if (newIndex < 0) newIndex = 26 + newIndex
+        if (newIndex > 25) newIndex = newIndex - 26;
+        if (newIndex < 0) newIndex = 26 + newIndex;
         if (str[i] === str[i].toUpperCase()) {
             newString += alphabet[newIndex].toUpperCase();
         } else newString += alphabet[newIndex];
