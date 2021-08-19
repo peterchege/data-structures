@@ -126,3 +126,17 @@ function merge(leftArr, rightArr) {
 
     return resultArr.concat(leftArr.slice(leftIndex)).concat(rightArr.slice(rightIndex));
 }
+
+/* O (2^n) exponetial */
+
+function fib(n) {
+    if (n === 0) {
+        return 0;
+    }
+    if (n === 1){
+        return 1;
+    }
+
+    return fib(n-1) + fib(n-2);
+}
+
