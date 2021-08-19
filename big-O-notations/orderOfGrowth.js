@@ -140,3 +140,24 @@ function fib(n) {
     return fib(n-1) + fib(n-2);
 }
 
+/* O (n!) Factorial */
+
+function f(n) {
+    if (n === 0){
+        console.log("**********************")
+    }
+
+    for ( let i = 0; i < n; i++ ) {
+        f(n - 1);
+    }
+}
+
+/* Space complexity */
+
+function countDown(n) {
+    if (n === 0){
+        console.log("**********************")
+    }
+
+   return countDown(n - 1);
+}
