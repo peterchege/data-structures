@@ -45,6 +45,10 @@ function sumOfArray2(numberArrays) {
     return result;
 }
 
+// T = 1 + 1 + 1 + n
+// T =  1 * n
+// T = n
+
 // using constant time complexity
 
 function sumOfArray3(z) { 
