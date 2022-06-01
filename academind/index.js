@@ -35,12 +35,24 @@ function sumOfArray(z) {
     return sum;
 }
 
+// es6 for the above solution
+
+function sumOfArray2(numberArrays) { 
+    let result = 0;
+    for (const numberArray of numberArrays) { 
+        result += numberArray;
+    }
+    return result;
+}
+
 // using constant time complexity
 
-function sumOfArray2(z) { 
+function sumOfArray3(z) { 
     return z.reduce((a, b) => a + b);
 }
 
 console.log(sumOfArray([3,5,6,7,8,9,10]));
-console.log(sumOfArray2([3,5,6,7,8,9,10]));
+console.log(sumOfArray2([3, 5, 6, 7, 8, 9, 10]));
+console.log(sumOfArray3([3,5,6,7,8,9,10]));
+
 
