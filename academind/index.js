@@ -49,10 +49,10 @@ function sumOfArray2(numberArrays) {
 // T =  1 * n
 // T = n
 
-// using constant time complexity
+// using javascript in built function which is still linear
 
 function sumOfArray3(z) { 
-    return z.reduce((a, b) => a + b);
+    return z.reduce((sum, curNum) => sum + curNum, 0);
 }
 
 console.log(sumOfArray([3,5,6,7,8,9,10]));
