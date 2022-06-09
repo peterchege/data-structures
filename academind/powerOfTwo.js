@@ -17,4 +17,8 @@ function squareOfTwo(number) {
 }
  
 
+// Best case: number = 13 => O(1)
+// Average Case: 0(log n)
+// Worst Case: 1,125,899,906,842,624 => O(log n)
+
 console.log(squareOfTwo(8));
