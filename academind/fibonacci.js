@@ -9,6 +9,8 @@ function fib(n) {
 
 }
 
+// T = 1+1+1+2*(n-1) = 3+2n-2 = 2n = n
+// => O(n) => Lnear time Complexity
 
 
 console.log(fib(1));
