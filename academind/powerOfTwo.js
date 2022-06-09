@@ -21,4 +21,19 @@ function squareOfTwo(number) {
 // Average Case: 0(log n)
 // Worst Case: 1,125,899,906,842,624 => O(log n)
 
+
+//Method two
+
+function isPowerOfTwo(number) {
+    if (number < 1) {
+        return false;
+    }
+
+    return (number & (number - 1)) === 0;
+}
+
+// Best case: the time complexity is constant ==> 0(1)
+
+
+console.log(isPowerOfTwo(8));
 console.log(squareOfTwo(8));
