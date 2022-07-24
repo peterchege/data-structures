@@ -34,3 +34,10 @@ const arr2 = [20, -30, 10, 50, -60, 70];
 
 
 console.log(findElement2(arr2, 70));
+
+
+
+// javascript inbuilt functions
+
+console.log(arr2.findIndex((e) => e % 70 == 0)); // returns the index of the element that is divisible by 70
+console.log(arr2.find((e) => e % 70 == 0)); // returns the element that is divisible by 70
