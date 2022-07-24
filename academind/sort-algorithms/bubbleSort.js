@@ -9,7 +9,7 @@ function sort(arr) {
         for (let inner = outer + 1; inner <= resultArray.length; inner++) {
             innerEl = resultArray[inner];
 
-            if (outerEl > innerEl) {
+            if (outerEl < innerEl) {
                 resultArray[outer] = innerEl;
                 resultArray[inner] = outerEl;
 
