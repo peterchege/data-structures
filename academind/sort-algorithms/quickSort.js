@@ -41,6 +41,10 @@ function sort(arr) {
 
 }
 
+// Recursive Step runtime: O(n^logb(a)) => O(n^log2(2)) => O(n^1) => O(n)
+// Runtime outside of the recursion: O(n) 
+// Algorithm runtime: O(n^logb(a) * log n) => O(n * log n) 
+
 
 const sortedArr = sort([-5, 10, -30, 40, -30, 5, -4]);
 
