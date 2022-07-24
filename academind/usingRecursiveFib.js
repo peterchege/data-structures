@@ -10,4 +10,4 @@ function fib(n) {
 
 // time complexity: O(2^n)
 
-console.log(fib(15));
+console.log(fib(4));

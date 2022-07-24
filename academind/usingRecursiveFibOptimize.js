@@ -1,4 +1,4 @@
-// Return the nth element of the FIbonacci Sequence using recursive
+// Return the nth element of the FIbonacci Sequence using recursive using memoization(Dynamic Programming)
 
 function fib(n, mem) {
     // [1,1,2,3,5,8]
@@ -15,4 +15,4 @@ function fib(n, mem) {
 
 // time complexity: O(n)
 
-console.log(fib(15));
+console.log(fib(15, {}));
