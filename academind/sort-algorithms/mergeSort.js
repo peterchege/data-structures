@@ -1,9 +1,15 @@
 function sort(arr) { 
+    console.log('FUNCTION START');
+    console.log(arr);
+
     if (arr.length < 2) {
         return arr;
     }
 
     if (arr.length === 2) { 
+        console.log('EXACTLY 2 ITEMS');
+        console.log(arr[0] > arr[1] ? [arr[1], arr[0]] : arr);
+
         return arr[0] > arr[1] ? [arr[1], arr[0]] : arr;
     }
 
@@ -17,6 +23,7 @@ function sort(arr) {
     const leftSortedArray = sort(leftArr);
     const rightSortedArray = sort(rightArr);
 
+    console.log('AFTER RECURSIVE STEP');
     console.log('LeftSortedArray:', leftSortedArray);
     console.log('RigthSortedArray:', rightSortedArray);
     
@@ -34,6 +41,9 @@ function sort(arr) {
             leftIndex++;
         }
     }
+
+    console.log('AFTER MERGE');
+    console.log(mergeArr);
     
     return mergeArr;
 
