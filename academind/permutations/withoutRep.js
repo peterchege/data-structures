@@ -1,33 +1,35 @@
 // without repetitions
 
 function getPermutations(options) {
-  permutations = [];
+  const permutations = [];
 
-  //   console.log('First active ===>', options);
+  console.log('First active ===>', options);
 
   if (options.length === 1) {
     return [options];
   }
 
-    partialPermutations = getPermutations(options.slice(1));
-  //   console.log('Sliced Options ===>', options);
-  //   console.log('The partialPermutations ===>', partialPermutations);
+  const partialPermutations = getPermutations(options.slice(1));
+  console.log('Last Sliced Options ===>', options);
+  console.log('The partialPermutations ===>', partialPermutations);
 
   const firstOption = options[0];
-  //   console.log('The firstOption ===>', firstOption);
+  console.log('The firstOption ===>', firstOption);
 
-    for (let i = 0; i < partialPermutations.length; i++) {
-        const partialPermutation = partialPermutations[i];
-        // console.log('The partialPermutation ===>', partialPermutation);
-  
-        for (let j = 0; j <= partialPermutation.length; j++) {
-            const permutationsInFront = partialPermutation.slice(0, j);
-            const permutationsAfter = partialPermutation.slice(j);
-            permutations.push(
-                permutationsInFront.concat([firstOption], permutationsAfter)
-            );
-        }
+  for (let i = 0; i < partialPermutations.length; i++) {
+    const partialPermutation = partialPermutations[i];
+    console.log('OUTER LOOP');
+    console.log('The partialPermutation ===>', partialPermutation);
+
+    for (let j = 0; j <= partialPermutation.length; j++) {
+      const permutationsInFront = partialPermutation.slice(0, j);
+      const permutationsAfter = partialPermutation.slice(j);
+      permutations.push(
+        permutationsInFront.concat([firstOption], permutationsAfter)
+      );
     }
+  }
+
   return permutations;
 }
 
