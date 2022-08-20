@@ -26,3 +26,5 @@ const digits = [1, 2, 3];
 const resultLength = 3;
 
 console.log(getPermutations(digits, resultLength));
+
+// Time Complexity: O(n^r) => n is the number options, r is the length
